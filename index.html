@@ -2,40 +2,95 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>himedia</title>
-    <style>
-        *{margin:0; padding: 0; }
-        li{list-style: none;}
-        a:link,a:visited{color:black; text-decoration: none;}
-        .nav{width:1000px; margin:0 auto;}
-        
-        .nav li{float:left; width:20%; background: skyblue; transition: 
-        0.3s;  }
-        .nav li:hover{background: pink; }
-        
-        
-        .nav a{display: block; text-align: center; line-height: 40px; transition: 0.5s;}
-        .nav a:hover{color:red;}
-       
-        
-        .cfixed:after{content:""; display: block; clear: both;}
-    </style>
+    <title>하이미디어</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+    
     
 </head>
 <body>
+<header id="header"> <!--   100퍼센트-->
+       <div class="utilwrap"> <!--   100퍼센트-->
+           <div class="util clearfix"> <!--   980px-->
+               <ul class="utilMenu clearfix">
+                   <li><a href="#">Login</a></li>
+                   <li><a href="#">Join</a></li>
+                   <li><a href="#">Contact us</a></li>
+                   <li><a href="#">English</a></li>
+               </ul>
+           </div>
+           
+       </div>
    
-   <ul class="nav cfixed">
-       <li><a href="#">menu1</a></li>
-       <li><a href="#">menu2</a></li>
-       <li><a href="#">menu3</a></li>
-       <li><a href="#">menu4</a></li>
-       <li><a href="#">menu5</a></li>
-   </ul>
+     <h1><a href="#">하이미디어</a></h1>
    
-   <div class="visual">
+   <div class="gnbwrap"> <!--   100퍼센트 #1d5da4-->
+       <nav class="gnbmenu"> <!--   980px margin 0 auto-->
+           <ul class="clearfix">
+               <li><a href="#">회사소개</a></li>
+               <li><a href="#">제품소개</a></li>
+               <li><a href="#">사업영역</a></li>
+               <li><a href="#">고객센터</a></li>
+               <li><a href="#">사회공헌</a></li>
+               <li><a href="#">인재채용</a></li>
+           </ul>
+       </nav>
+   </div>
+</header>
+   <div class="visualwrap">
+       <div class="visual">
+           <img src="images/main_slider_img.png" alt="light" class="vImg1">
+           <img src="images/main_slider_txt.png" alt="text" class="vImg2">
+           
+       </div>
        
        
    </div>
+  <section class="section">
+      <ul class="banner clearfix">
+          <li>
+             <a href="#">
+              <img src="images/icon01.png" alt="사회공헌" class="mb5">
+              <h3 class="mb5">사회공헌</h3>
+              <p>Lorem ipsum dolor sit.</p>
+            </a>
+          </li>
+          <li>
+             <a href="#">
+              <img src="images/icon02.png" alt="사회공헌" class="mb5">
+              <h3 class="mb5">사회공헌</h3>
+              <p>Lorem ipsum dolor sit.</p>
+            </a>
+          </li>
+          <li>
+             <a href="#">
+              <img src="images/icon03.png" alt="사회공헌" class="mb5">
+              <h3 class="mb5">사회공헌</h3>
+              <p>Lorem ipsum dolor sit.</p>
+            </a>
+          </li>
+          <li>
+             <a href="#">
+              <img src="images/icon04.png" alt="사회공헌" class="mb5">
+              <h3 class="mb5">사회공헌</h3>
+              <p>Lorem ipsum dolor sit.</p>
+            </a>
+          </li>
+          <li>
+             <a href="#">
+              <img src="images/icon05.png" alt="사회공헌" class="mb5">
+              <h3 class="mb5">사회공헌</h3>
+              <p>Lorem ipsum dolor sit.</p>
+            </a>
+          </li>
+      </ul>
+      
+  </section>
    
+   
+   
+    
 </body>
 </html>
