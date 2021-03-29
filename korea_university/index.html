@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Korea University</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.png">
-    <link rel="apple-touch-icon-precomposed" href="img/logo.png"
-    >
-    
+    <link rel="apple-touch-icon-precomposed" href="img/logo.png">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
 </head>
 <body>
     <header class="header">
@@ -52,8 +53,9 @@
         </div>
     </header>
     
-    <section class="section">
-        <div class="slogan_box">
+    <div id="contents"><!--100%-->
+       <section class="titleWrap"> <!--1200px center-->
+        <div class="slogan_box">           
             <p class="slogan_p">함께 나누며 세상을 이끌어</p>
             <h1 class="slogan_h1">세계로향하는 한국대학교</h1>
         </div>
@@ -77,29 +79,37 @@
                     </a></li>
             </ul>
         </div>
-    </section>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+      </section>
+      <div class="container">
+          <ul class="clearfix">
+              <li><!--75%-->
+              <div class="sliderWrap">
+                <ul class="slider">
+                  <li><img src="" alt=""></li>
+                  <li><img src="" alt=""></li>
+                  <li><img src="" alt=""></li>
+                </ul>
+              </div>
+              </li>
+              <li><!--25%-->
+              02</li>
+              <li><!--25%-->
+              03</li>
+              <li><!--25%-->
+              04</li>
+              <li><!--25%-->
+              05</li>
+              <li><!--25%-->
+              06</li>
+              <li><!--25%-->
+              07</li>
+              <li><!--75%-->
+              08</li>              
+          </ul>
+      </div>
+      
+      
+    </div>
     
     
 </body>

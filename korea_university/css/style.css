@@ -29,14 +29,14 @@ body{min-width:640px; }
 }
 
 
-.menu{width:1200px; height: 120px; margin: 0 auto;}
+.menu{width:1200px; height: 117px; margin: 0 auto;}
 .logo{float: left; padding-top: 32px; }
 .menu_box{float: right;}
 .main_menu{float: left;}
 
-.main_menu li{float: left; margin-right: 50px; line-height: 120px; }
+.main_menu li{float: left; margin-right: 50px; line-height: 117px; }
 
-.toggle_buttons{float: right; padding-top: 40px; }
+.toggle_buttons{float: right; padding-top: 35px; padding-bottom: 37px;}
 .main_toggle_btn{display: block; width: 45px; height: 45px; text-indent: -99999px; background:url(../img/main_toggle_btn.png) no-repeat; cursor:pointer; }
 .login_toggle_btn{display: block; width: 45px; height: 45px; text-indent: -99999px; background:url(../img/login_toggle_btn.png) no-repeat; cursor:pointer;  }
 .main_toggle{float: left;}
@@ -48,6 +48,25 @@ body{min-width:640px; }
 }
 
 
+/*contents*/
+#contents{
+    height: 1300px; background-image: url(../img/bg_dot.gif), url(../img/main_bg.jpg); background-repeat: repeat, no-repeat; background-position:center; background-size:auto, cover; padding: 100px 0;}
+
+#contents .titleWrap{width: 1200px; height: 260px; background: violet; margin:0 auto; margin-bottom: 50px;}
+
+#contents .container{width: 1200px; margin: 0 auto; background: #fff;}
+
+#contents .container>ul>li{float: left; width: 25%; height: 225px; }
+#contents .container>ul>li:nth-child(2n){background: pink;}
+
+#contents .container>ul>li:nth-child(1){width:75%; height: 450px; background: gray;}
+#contents .container>ul>li:nth-child(2){height: 450px;}
+#contents .container>ul>li:nth-child(3){}
+#contents .container>ul>li:nth-child(4){}
+#contents .container>ul>li:nth-child(5){}
+#contents .container>ul>li:nth-child(6){background: red;}
+#contents .container>ul>li:nth-child(7){}
+#contents .container>ul>li:nth-child(8){width: 75%;}
 
 
 
