@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴만들기</title>
+    <style>
+        *{margin:0; padding:0; }
+        li{list-style: none;}
+        li a{text-decoration: none; color:green; }
+        
+        .nav{ width: 500px; margin: 0 auto; background: red;  }
+        .nav li{float:left; background: violet; width:calc(496px / 4); border-right: 1px solid #000; }
+        .nav li:last-of-type{border-right:none;}
+        
+        .nav li:hover{background: blue;}
+        .nav li a{display: block;  text-align: center; line-height: 50px; }
+        .nav li a:hover{color:red;}
+        
+        .up{background: skyblue; text-align: center;}
+    
+        .cfixed:after{content:""; display: block; clear: both;}
+    </style>
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <ul class="nav cfixed">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <div class="up">jwb</div>
+    </ul>
+    
+    
+    
+    
+</body>
+</html>

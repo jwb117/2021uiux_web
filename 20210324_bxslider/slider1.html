@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slider parctice</title>
+    
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">   
+ 
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    
+    
+    
+    <script>
+        $(Document).ready(function(){
+            var jwbslider = $(".slider").bxSlider({
+             auto:false, pager:false, controls:false
+            });
+            
+            $(".nextBtn").click(function(){
+            jwbslider.goToNextSlide();
+                
+            });
+            
+            $(".prevBtn").click(function(){
+            jwbslider.goToPrevSlide();
+                
+            });
+                     
+    });    
+        
+    </script>
+    
+    
+     <style> 
+         body{min-width: 1200px;}
+        .container{width: 1000px; margin:0 auto; position: relative;}
+         
+        .container li img{width: 100%; display: block;}
+        
+         .nextBtn, .prevBtn{position: absolute;  top:50%; transform: translateY(-50%); cursor: pointer;}
+         .nextBtn{right:0;}
+         .prevBtn{left:0;}
+         
+         
+        .slider img{width: 100%;}
+         
+        .bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+    border: 0 none;
+    background: #fff; margin-bottom: 0; 
+}
+        .bx-wrapper .bx-pager{bottom:30px; }
+         
+         .bx-wrapper .bx-pager.bx-default-pager a:hover{background: red;}    
+         
+/*         COMMON*/
+           
+         .mb30{margin-bottom: 30px !important;}
+         .gray{background: #919191;}
+         .pt30{padding-top: 30px !important;}
+         .pb30{padding-bottom: 30px !important;}
+         .darkgray{background:#727272; }
+         
+         
+         #header{background: skyblue;}
+         #header .container ul li{float: left; width:calc(1000px / 6)}
+         #header .container ul li:hover {background: #15c9e0;}
+         #header .container ul li a{display: block; line-height: 40px; text-align: center; font-weight: bold;}
+         #header .container ul li:hover a{color:#fff;}
+         
+         
+         
+         #section1.container li{float: left; width:calc((1000px - 60px) / 4);  position: relative; cursor: pointer; overflow: hidden; }
+         
+         #section1.container li:first-child {border-top-left-radius:50%;}
+         
+         #section1.container li:nth-child(2){border-top-right-radius:50%; } 
+         
+         #section1.container li:nth-child(3) {border-bottom-right-radius:50%;}
+         
+         #section1.container li:nth-child(4){border-bottom-left-radius:50%; }
+         
+
+         #section1 li + li{margin-left: 20px;}
+         #section1 h2,#section1 p{text-align: center;}
+         #section1 h2:after{content: "";display: block;  width: 100px; height: 2px; background: #000; margin: 10px auto;}
+         #section1 p{margin-bottom: 20px;}
+ 
+         
+         
+         
+         
+         
+         #section2.container li{float: left; width: calc((1000px - 60px) / 4); position:relative; cursor: pointer; overflow: hidden;}
+         
+         #section2.container li:first-child {border-radius:50%;}
+         
+         #section2.container li:nth-child(2){border-top-left-radius:50%; border-top-right-radius:50%;  } 
+         
+         #section2.container li:nth-child(3) {border-bottom-right-radius:50%; border-bottom-left-radius: 50%;}
+         
+         #section2.container li:nth-child(4){border-bottom-left-radius:50%; border-top-left-radius: 50%; }
+         
+         
+         #section2 li + li{margin-left: 20px;}
+         #section2 h2,#section2 p{text-align: center;}
+         #section2 h2:after{content: "";display: block;  width: 100px; height: 2px; background: #000; margin: 10px auto;}
+         #section2 p{margin-bottom: 20px;}
+         
+       
+         
+         
+         
+         #section1 .overlay1{background: rgba(0,255,0,0.7); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px;
+          top:-100%; left:0; }          
+               
+         #section1 li:hover .overlay1{opacity: 0.5; top:0 ; left:0;  }
+         
+         #section1 .overlay2{background: rgba(255,0,0,.7); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px; top:0; left:100%;}
+         
+         #section1 li:hover .overlay2{opacity: 0.5; top:0 ; left:0;  }
+          
+         
+         #section1 .overlay3{background: rgba(0,0,255,0.7); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px;
+          top:100%; left:0; }          
+               
+         #section1 li:hover .overlay3{opacity: 0.5; top:0 ; left:0;  }
+         
+         #section1 .overlay4{background: rgba(252, 233, 4, 0.81); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px; top:0; left:-100%;}
+         
+         #section1 li:hover .overlay4{opacity: 0.5; top:0 ; left:0;  }
+         
+         
+         
+         
+         
+         
+         
+         #section2 .overlay5{background: rgba(0,255,0,0.7); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px;
+          top:-100%; left:0; }          
+               
+         #section2 li:hover .overlay5{opacity: 0.5; top:0 ; left:0;  }
+         
+         #section2 .overlay6{background: rgba(255,0,0,.7); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px; top:0; left:100%;}
+         
+         #section2 li:hover .overlay6{opacity: 0.5; top:0 ; left:0;  }
+          
+         
+         #section2 .overlay7{background: rgba(0,0,255,0.7); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px;
+          top:100%; left:0; }          
+               
+         #section2 li:hover .overlay7{opacity: 0.5; top:0 ; left:0;  }
+         
+         #section2 .overlay8{background: rgba(252, 233, 4, 0.81); height: 100%; position: absolute; width:100%; opacity: 1; transition: 0.3s; text-align: center; line-height: 235px; top:0; left:-100%;}
+         
+         #section2 li:hover .overlay8{opacity: 0.5; top:0 ; left:0;  }
+         
+         
+         
+         
+         
+         
+    </style>
+    
+    
+    
+</head>
+
+<header>
+    <header id="header">
+            <div class="container">
+                <ul class="clearfix">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                    <li><a href="#">menu6</a></li>
+                </ul>
+            </div>      
+    </header>
+    
+    
+    
+    
+</header>
+
+
+
+
+<body>
+   <div class="container mb30">
+       <ul class="slider">
+           <li><a href="#"><img src="images/pc01.jpg" alt="" ></a></li>
+           <li><a href="#"><img src="images/pc02.jpg" alt=""></a></li>
+           <li><a href="#"><img src="images/pc03.jpg" alt=""></a></li>
+       </ul>
+       <div class="nextBtn">
+           <img src="images/next.png" alt="nextBtn"> </div>
+       <div class="prevBtn">
+           <img src="images/prev.png" alt="prevBtn"> </div>
+    
+   </div>
+   
+   
+   <div class="gray pt30 pb30">
+       <section class="container mb30" id="section1">
+          <h2>gallery</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, recusandae.</p>
+           <ul class="clearfix">
+               <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay1">TOP</div>
+               </li>
+              
+               <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay2">RIGHT</div>
+               </li>
+              
+               <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay3">BOTTOM</div>
+               </li>
+              
+               <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay4">LEFT</div>
+               </li>
+              
+           </ul>
+       </section>
+   </div>
+   
+   
+   
+   <div class="darkgray pt30 pb30"><section class="container mb30" id="section2">
+          <h2>gallery</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, recusandae.</p>
+           <ul class="clearfix">
+              <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay5">TOP</div>
+               </li>
+              
+               <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay6">RIGHT</div>
+               </li>
+              
+               <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay7">BOTTOM</div>
+               </li>
+              
+               <li><img src="../images/testimg.jpg" alt="">
+               <div class="overlay8">LEFT</div>
+               </li>
+           </ul>
+       </section>
+       </div>
+    
+</body>
+</html>

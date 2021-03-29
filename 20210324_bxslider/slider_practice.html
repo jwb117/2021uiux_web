@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider({
+                controls:false,
+                pager:false,
+                auto:false
+            });
+        });
+    </script>
+    <style>
+    .bx-wrapper {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        margin-bottom: 0;}  
+    
+        .wrap{width:1260px; margin:0 auto; position: relative; }
+      
+        .txtwrap{width:400px; position: absolute; top:100px; right: 50px;}
+    
+        .txtwrap h2:after{content: ""; width: 300px; background: blue; height: 2px; display: block; margin:10px 0;}
+    
+        .txtwrap p{margin-bottom: 17px;}
+    
+        .btn{padding: 0 20px; border: 1px solid #000; border-radius: 20px; display: block; width:200px; text-align: center;  line-height: 40px; transition: 0.5s;}
+    
+        .btn:hover{background: #000; color:#fff;}
+    
+        .sliderTab{background: #27e6ac; bottom:0; left:0; width:100%; position: absolute; line-height:  40px; }
+    
+        .sliderTab a{text-align: center; display: block; color:#000; float:left; width:calc(100% / 3); }
+        .sliderTab a:hover{color:#e61787; background: #1985d4; transition: 0.5s}
+    
+        .sliderTab a.active{background: #16dbeb; }
+    </style>
+    
+    
+    
+    
+    
+    
+</head>
+<body>
+    <div class="wrap">
+        <ul class="slider">
+            <li>
+                <img src="images/main_slider01.jpg" alt="">
+                <div class="txtwrap">
+                    <h2>Lorem ipsum dolor sit.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/main_slider01.jpg" alt="">
+                <div class="txtwrap">
+                    <h2>Lorem ipsum dolor sit.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/main_slider01.jpg" alt="">
+                <div class="txtwrap">
+                    <h2>Lorem ipsum dolor sit.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sliderTab">
+            <a href="#" data-slide-index="0">MENU1</a>
+            <a href="#" data-slide-index="1">MENU2</a>
+            <a href="#" data-slide-index="2">MENU3</a>
+        </div>
+        
+    </div>
+</body>
+</html>

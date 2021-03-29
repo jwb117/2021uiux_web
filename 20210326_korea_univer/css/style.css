@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*common*/
+.clearfix:after{content:""; display:block; clear:both;}
+*{margin:0; padding:0; }
+body{min-width:640px; }
+
+.header{width:100%; }
+.long_blue{width: 100%; background: #0044af;}
+
+.gnb{width:1200px; margin:0 auto;  }
+.gnb_box{float:left;}
+
+.main_gnb{background: #00163b;}
+.main_gnb li{float: left; text-align: center; border-right:2px solid #0044af; }
+.main_gnb li:last-child{border-right: none;}
+.main_gnb li:hover{background: #fff; }
+.main_gnb li a{display: block; color:#fff; padding:0 40px;line-height: 40px;}
+.main_gnb li:hover a{color:#6b6b6b;}
+
+.sub_gnb{float: right;padding-top:10px; }
+.sub_gnb li{float: left; margin-right:10px; }
+.sub_gnb li:last-child{margin-right: 0;}
+.sub_gnb li a{ color:#fff; font-size:12px; }
+
+.sub_gnb div.zoom-in,.sub_gnb div.zoom-out{float: left;width: 16px;height: 16px;}
+.sub_gnb div.zoom-out{margin-right:3px;}
+.sub_gnb div.zoom-in a, .sub_gnb div.zoom-out a{
+    display: block; color: #9b9b9b; width: 16px; height: 16px; background: #fff; font-weight: bold; text-align: center; 
+}
+
+
+.menu{width:1200px; height: 120px; margin: 0 auto;}
+.logo{float: left;}
+.menu_box{float: right;}
+.main_menu{float: left;}
+.main_menu li{float: left;}
+.toggle_buttons{float: right;}
+.main_toggle{}
+.login_toggle{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slider tap horizontal</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".slider").bxSlider({
+            controls:false,
+            pagerCustom:".sliderTab",
+            auto:true
+            
+        });
+    });
+    
+    </script>
+    <style>       
+        
+        .bx-wrapper {
+          -moz-box-shadow: 0 0 5px #ccc;
+          -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: none;
+          border: none;
+            margin-bottom: 0;}        
+        
+        .wrap{width: 1000px; margin: 0 auto; position: relative; }
+        .wrap .slider li img{width: 100%;}
+            
+        .bx-wrapper .bx-pager{bottom: 30px;}
+        .txtwrap{ position: absolute; top:100px; right: 50px; width: 400px; }
+        
+        .txtwrap h2:after{content:""; width:300px; display: block; background: #000 ; height: 1px; margin: 10px 0;}
+        
+        .txtwrap p{margin-bottom: 10px;}
+        
+        .btn{display: block; padding: 0 20px; width: 200px; line-height: 40px;  text-align: center; border:1px solid #000; border-radius:20px; transition: 0.3s; }
+        
+        .btn:hover{background: #000; color:#fff;}
+        
+        .wrap .sliderTab{position: absolute; background: #9b9b15; width: 100%; bottom:0; left: 0; }
+        
+        .wrap .sliderTab a{display: block; float:left; width: calc(100% / 3); text-align: center; line-height: 40px; color: #fff;}
+        
+        .wrap .sliderTab a:hover{color: #000; background: red;}
+        .wrap .sliderTab a.active{background: #f00;}
+    </style>
+    
+    
+</head>
+<body>
+ <div class="wrap">
+         <ul class="slider">
+           <li>
+              <img src="images/main_slider01.jpg" alt="main_slider">
+               <div class="txtwrap">
+                   <h2>Lorem ipsum dolor sit.1</h2>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, fuga!</p>
+                   <a href="#" class="btn">바로가기</a>
+               </div>
+           </li>
+          
+           <li>
+              <img src="images/main_slider01.jpg" alt="main_slider">
+               <div class="txtwrap">
+                   <h2>Lorem ipsum dolor sit.2</h2>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, fuga!</p>
+                   <a href="#" class="btn">바로가기</a>
+               </div>
+           </li>
+          
+           <li>
+              <img src="images/main_slider01.jpg" alt="main_slider">
+               <div class="txtwrap">
+                   <h2>Lorem ipsum dolor sit.3</h2>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, fuga!</p>
+                   <a href="#" class="btn">바로가기</a>
+               </div>
+           </li>
+      
+           
+       </ul>
+       <div class="sliderTab">
+           <a href="#" data-slide-index="0">MENU1</a>
+           <a href="#" data-slide-index="1">MENU2</a>
+           <a href="#" data-slide-index="2">MENU3</a>
+           
+       </div>
+   </div>
+</body>
+</html>
