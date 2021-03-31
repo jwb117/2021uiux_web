@@ -11,7 +11,7 @@
     <script>
         $(document).ready(function(){
             $(".slider").bxSlider({
-               controls:true                
+               controls:true
             });            
         });
     
@@ -20,8 +20,8 @@
     
     <style>
         .wrap{background: skyblue;}
-        .gnb{width: 1200px; margin: 0 auto; height: 40px; position: relative;}
-        .gnb>ul>li{float:left; width: 20%; background: skyblue;}
+        .gnb{width: 1200px; margin: 0 auto; height: 40px; }
+        .gnb>ul>li{float:left; width: 20%; background: skyblue; position: relative;}
         .gnb>ul>li:hover{background: #23829f; }
         .gnb>ul>li>a{display: block; line-height: 40px; text-align: center;}
         .gnb>ul>li:hover a{color: white;}
@@ -29,7 +29,7 @@
 /*        .gnb>ul:hover .submenu{display: block;}*/
         
         
-        .gnb .submenu{display: none; position: absolute; z-index: 1; margin-bottom: 10px;} 
+        .gnb .submenu{display: none; position: absolute; z-index: 1; margin-bottom: 10px; width:100%; background: #23829f;} 
         .gnb .submenu li:hover{background: #9de1fd;}
         .gnb .submenu li a{display: block; line-height: 30px; text-align: center;}
         .gnb .submenu li a:hover{color: white;}

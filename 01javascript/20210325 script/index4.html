@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script>
+    let x=5;
+    let y=7;
+    let result;
+    result = (x>y)? x:y;
+    document.write("큰값 : " + result +"<br>");
+    result=(x>y)? x-y:y-x;
+    document.write("차이값 : "+result);
+
+    // x=x+1;
+    x+=1
+    console.log("x값 :" + x)
+
+    const gender = "O";
+    const age=17;
+    let result1;
+    if(gender=="M"){
+      console.log("남자");
+      if(age >= 19){
+        result1 = "남자/성인입니다.";
+      }else{
+        result1 = "남자/미성년자입니다.";
+      }
+    }else{
+      console.log("여자");
+      if(age >= 19){
+        result1 = "여자/성인입니다.";
+      }else{
+        result1 = "여자/미성년자입니다.";
+      }
+    }
+    document.write("<br>"+"당신은 " + result1);
+
+
+
+</script>
+
+ </head>
+ <body>
+
+ </body>
+ </html>
