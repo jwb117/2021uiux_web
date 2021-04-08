@@ -34,6 +34,39 @@
               <span class="icon pass1">password</span>
             </div>
           </fieldset>
+          <fieldset>
+            <legend>개인정보</legend>
+              <div class="field">
+                <label for="username" class="blind">이름</label>
+                <input type="text" id="username" name="uname" placeholder="이름" class="inp-field w458">
+              </div>
+              <div class="field btn-radio">
+                <label for="male" class="btn-label male">남자</label>
+                <input type="radio" name="user" value="남자" id="male">
+                <label for="female" class="btn-label female">여자</label>
+                <input type="radio" id="female" name="user" value="여자">
+              </div>
+
+              <div class="field birth">
+                <label for="user-birth">생일</label>
+                <input type="text" id="user-birth" name="ubirth" placeholder="년(4)자" class="inp-field w130" maxlength="4">
+                <span class="field_wall">|</span>
+                <select name="month">
+                  <option value="1월">1월</option>
+                  <option value="2월">2월</option>
+                  <option value="3월">3월</option>
+                  <option value="4월">4월</option>
+                  <option value="5월">5월</option>
+                  <option value="6월">6월</option>
+                  <option value="7월">7월</option>
+                  <option value="8월">8월</option>
+                  <option value="9월">9월</option>
+                  <option value="10월">10월</option>
+                  <option value="11월">11월</option>
+                  <option value="12월">12월</option>                  
+                </select>
+              </div>
+          </fieldset>
           <div class="btn-area">
             <input type="submit" value="가입하기" class="btn-submit">
           </div>
