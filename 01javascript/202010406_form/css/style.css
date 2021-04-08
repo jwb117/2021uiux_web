@@ -2,6 +2,7 @@
 /* common */
 .w458{width: 458px !important;}
 .w130{width: 130px !important;}
+.w145{width: 145px !important;}
 
 
 body{background: #eee;}
@@ -30,3 +31,6 @@ cursor: pointer; position: absolute; top:8px; }
 .content fieldset .field .btn-label.female{right: 15px;}
 
 .content fieldset .field.birth label{display: block; width:53px; height: 49px; float: left; text-align: center; line-height: 49px; border-right: 1px solid #eee;}
+.content fieldset .field.birth select{width: 110px; height: 29px; border: 0 none; font-size: 0.9rem; text-indent: 5px; float: left; margin-top: 10px; }
+.content fieldset .field.birth input{float: left;}
+.content fieldset .field.birth .field_wall{float: left; width: 0; height: 29px; border-right: 1px solid #cdcdcd; margin-top: 10px; text-indent: -9999px;}
