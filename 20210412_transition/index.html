@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .box{width: 300px; height: 300px;
+    border: 10px solid skyblue; overflow: hidden; transition: 0.3s;
+  background: skyblue; position: relative;}
+    .box img{width: 100%; transition:0.3s;}
+    .box:hover img{transform: scale(1.2);}
+    .box:hover {border: 20px solid skyblue;}
+
+    .cwrap{width: 50px; height: 50px; position: absolute; top:50%; left:50%;
+    transform: translate(-50%, -50%); border-radius: 25px; border: 4px solid #fff;
+    transition:.3s;}
+    /* display: flex; justify-content: center; align-items: center;} */
+
+
+
+    .cwrap .bar1{transform: translate(-50%, -50%);}
+    .cwrap .bar2{transform: translate(-50%, -50%) rotate(90deg);}
+
+    .cwrap div{width: 30px; height: 4px; background: #fff; position: absolute;
+    border-radius: 4px; left:50%; top: 50%;}
+
+    /* .cwrap .bar1{width: 30px; height: 4px; background: #fff; position: absolute;
+    border-radius: 4px;}
+
+    .cwrap .bar2{width: 30px; height: 4px; background: #fff; position: absolute;
+    transform: rotate(90deg); border-radius: 4px;} */
+
+    .box:hover .cwrap{transform:  translate(-50%, -50%) rotate(180deg);}
+
+  </style>
+
+</head>
+<body>
+  <div class="box">
+    <img src="../images/testimg.jpg" alt="testing" class="img01">
+    <div class="cwrap">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+    </div>
+  </div>
+</body>
+</html>
