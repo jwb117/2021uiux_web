@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>object</title>
+</head>
+<body id="body">
+  <p id="var1">정보1</p>
+  <p id="var2" class="font">정보2</p>
+  <p class="view1">정보3</p>
+  <p id="var4" class="view1">정보4</p>
+
+
+  <script>
+
+    console.log(document.getElementById("var1").innerHTML);
+    console.log(document.getElementsByTagName("p")[0].innerHTML);
+    console.log(document.getElementsByTagName("body")[0].innerHTML);
+
+    document.getElementById("var1").innerHTML="변경1";
+    document.getElementsByTagName("p")[1].innerHTML="변경2";
+    document.getElementsByTagName("body")[0].style.backgroundColor="skyblue";
+    document.getElementsByClassName("view1")[0].innerHTML="변경3";
+    document.getElementsByClassName("view1")[1].innerHTML="변경4";
+
+    document.querySelectorAll(".view1")[0].style.backgroundColor="orange";
+    document.querySelectorAll(".view1")[1].style.backgroundColor="orange";
+
+
+    function view(){
+      const view = document.querySelectorAll(".view1");
+    for(let i=0; i<view.length; i++){
+      view[i].style.border="3px solid #f0f";
+        }
+      }
+
+    function bgOrange(){
+      const bgOR = document.getElementById("body");
+      bgOR.style.backgroundColor="orange";
+    }
+
+    function bgYellow(){
+      const bgYL = document.getElementsByTagName("body")[0];
+      bgYL.style.backgroundColor="yellow";
+    }
+
+    function bgOff(){
+      const bgOff = document.querySelectorAll("body")[0];
+      bgOff.style.backgroundColor="#fff";
+    }
+
+
+        function bd(x){
+          console.log(x);
+
+                    const border = document.querySelectorAll("#var1");
+                    if(x==1){
+                    border[0].style.border="1px solid #000";
+                  }else{
+                    border[0].style.border="1px solid #fff";
+                  }
+      }
+
+        function fontWeight(x){
+          console.log(x);
+          const weight = document.getElementsByClassName("font")[0];
+          weight.style.fontWeight=x;
+        }
+
+
+
+
+  </script>
+
+
+  <button onclick="view()">테두리변경 </button>
+  <button onclick="bgOrange()">배경변경 오렌지</button>
+  <button onclick="bgYellow()">배경변경 노란색</button>
+  <button onclick="bgOff()">배경끄기</button>
+
+  <button onclick="bd(0)">보더끄기</button>
+  <button onclick="bd(1)">보더켜기</button>
+
+  <button onclick="fontWeight('bold')">두꺼운 글자</button>
+  <button onclick="fontWeight('normal')">얇은 글자</button>
+
+
+
+
+
+</body>
+</html>
