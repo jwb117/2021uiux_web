@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>event</title>
+</head>
+<body>
+    <!-- // 1.문서 내에서 함수로 등록 -->
+  <p onmouseover="this.style.background='orchid'" onmouseout="this.style.background='white'">마우스 올리면 변경</p>
+
+
+  <div class="mouse">마우스</div>
+  <div class="mouse1">마우스1</div>
+  <script>
+
+    const divMouse = document.querySelector(".mouse");
+    const divMouse1 = document.querySelector(".mouse1");
+
+// 2.무명 함수로 작성하기
+    divMouse.onmouseover = function(){
+      divMouse.style.background = "orchid";
+    }
+    divMouse.onmouseout = out;
+    function out(){
+      divMouse.style.background = "white";
+    }
+
+// 3. 애드 이벤트 리스튼너로 작성하기
+    divMouse1.addEventListener("mouseover", function(){
+      divMouse1.style.background = "skyblue";
+    });
+    divMouse1.addEventListener("mouseout", out1);
+    function out1(){
+      divMouse1.style.background = "white";
+    }
+  </script>
+</body>
+</html>

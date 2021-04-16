@@ -6,65 +6,74 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <style>
-    .box{width: 300px; height: 300px;
-    border: 10px solid skyblue; overflow: hidden; transition: 0.3s;
-  background: skyblue; position: relative; cursor: pointer;}
-    .box img{width: 100%; transition:0.3s;}
-    .box:hover img{transform: scale(1.2);}
-    .box:hover {border: 20px solid skyblue;}
-
-    .cwrap{width: 50px; height: 50px; position: absolute; top:50%; left:50%;
-    transform: translate(-50%, -50%); border-radius: 25px; border: 4px solid #fff;
-    transition:.3s;}
-    /* display: flex; justify-content: center; align-items: center;} */
 
 
-
-    .cwrap .bar1{transform: translate(-50%, -50%);}
-    .cwrap .bar2{transform: translate(-50%, -50%) rotate(90deg);}
-
-    .cwrap div{width: 30px; height: 4px; background: #fff; position: absolute;
-    border-radius: 4px; left:50%; top: 50%;}
-
-    /* .cwrap .bar1{width: 30px; height: 4px; background: #fff; position: absolute;
-    border-radius: 4px;}
-
-    .cwrap .bar2{width: 30px; height: 4px; background: #fff; position: absolute;
-    transform: rotate(90deg); border-radius: 4px;} */
-
-    .box:hover .cwrap{transform:  translate(-50%, -50%) rotate(180deg);}
-
-  </style>
 
 </head>
 <body>
+    <style>
+    /* 박스테두리 만들기 */
+      .box{width: 300px; height: 300px;
+      border: 10px solid skyblue; overflow: hidden; transition: 0.3s;
+    background: skyblue; position: relative; cursor: pointer;}
+      .box img{width: 100%; transition:0.3s;}
+      .box:hover img{transform: scale(1.2);}
+      .box:hover {border: 20px solid skyblue;}
+
+  /* 돌아가는 십자모양 아이콘 만들기 */
+      .cwrap{width: 50px; height: 50px; position: absolute; top:50%; left:50%;
+      transform: translate(-50%, -50%); border-radius: 25px; border: 4px solid #fff;
+      transition:.3s;}
+      /* display: flex; justify-content: center; align-items: center;} */
+      .cwrap .bar1{transform: translate(-50%, -50%);}
+      .cwrap .bar2{transform: translate(-50%, -50%) rotate(90deg);}
+
+      .cwrap div{width: 30px; height: 4px; background: #fff; position: absolute;
+      border-radius: 4px; left:50%; top: 50%;}
+
+      /* .cwrap .bar1{width: 30px; height: 4px; background: #fff; position: absolute;
+      border-radius: 4px;}
+
+      .cwrap .bar2{width: 30px; height: 4px; background: #fff; position: absolute;
+      transform: rotate(90deg); border-radius: 4px;} */
+
+      .box:hover .cwrap{transform:  translate(-50%, -50%) rotate(180deg);}
+
+    </style>
+
+    <div class="box">
+      <img src="../images/testimg.jpg" alt="testing" class="img01">
+      <div class="cwrap">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+      </div>
+    </div>
+
+  <!-- 그림이미지 위에 투명한 상자 덧씌우기 -->
   <style>
     .box01{width: 300px; height: 300px; display: flex; position: relative; justify-content: center;
     align-items: center; overflow: hidden; cursor: pointer;}
     .box01 .bg{width: 100%; height: 100%; background: #000;  position: absolute; transform: scale(0.7);
     transition: .3s; opacity: 0;}
-    .box01 img{position: absolute; transition: .3s}
-    .box01 h3{position: absolute; transform: translateY(160px); transition: .3s; color: #fff;}
-    .box01:hover img{transform: scale(1.1);}
     .box01:hover .bg{opacity: 0.5; transform: scale(1);}
-    .box01:hover h3{transform: translateY(0);}
-  </style>
 
-  <div class="box">
-    <img src="../images/testimg.jpg" alt="testing" class="img01">
-    <div class="cwrap">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-    </div>
-  </div>
+    .box01 img{position: absolute; transition: .3s}
+    .box01:hover img{transform: scale(1.1);}
+
+    .box01 h3{position: absolute; transform: translateY(160px); transition: .3s; color: #fff;}
+    .box01:hover h3{transform: translateY(0);}
+    
+  </style>
 
     <div class="box01">
       <img src="../images/testimg.jpg" alt="">
-      <div class="bg">1</div>
+      <div class="bg"></div>
       <h3>my tour</h3>
     </div>
 
+
+
+<!-- 버튼 메뉴 애니메이션 -->
     <style>
     .btnWrap{width: 200px; height: 40px; position: relative;}
     .btnWrap a{display: block; text-align: center; line-height: 35px;}
