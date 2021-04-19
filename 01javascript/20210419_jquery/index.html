@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- cdn -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+<!-- 아래에 있는 연결파일 (자바스크립트 파일) 또는 cdn(외부에서 가져오는 파일)이 꼭있어야한다. -->
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script>
+    // jquery(document).ready(function(){
+      $(document).ready(function(){
+        // $("button.btn").on("click", function(){});
+        $(".btn").click(function(){
+          $(".box").show();
+          // document.querySelector(".box").style.display="block";
+
+        });
+        // document.getElementsByClassName("btn")[0].addEventListener("click", function(){});
+        $(".box").click(function(){
+          // $(".box").hide(); 버튼 아래에 생기는 글자 클릭시 사라진다.
+          $(this).hide();
+
+        });
+
+        $("ul.gnb>li").click(function(){
+          console.log($(this).index());
+        //  $(this).css("background-color"); //get
+        //  $(this).css("background-color", "skyblue") //set
+
+        // $("ul.gnb>li").css("background-color", "skyblue"); //this와의 차이 = 전부다 적용된다
+        $("ul.gnb>li").css("background-color", "white");
+        $(this).css("background-color", "skyblue");
+        console.log($(this).css("background-color"));
+        });
+
+    });
+  </script>
+  <style>
+    .box{display: none;}
+  </style>
+</head>
+<body>
+  <button class="btn">click</button>
+
+  <div class="box">
+    hello
+  </div>
+  <ul class="gnb">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+  </ul>
+
+
+
+
+
+
+
+</body>
+</html>

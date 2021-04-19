@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>practice</title>
+  <style>
+    body{height: 4000px;}
+    .box{width: 150px; height: 150px; background: blue; position: absolute; left: 0; transition: 0.5s;}
+    .box.box1{top: 500px;}
+    .box.box2{top: 1000px;}
+    .box.box3{top: 1500px;}
+    .box.box4{top: 2000px;}
+    .box.box5{top: 2500px;}
+    .view{position: fixed; right: 0; top: 0; padding: 30px; background: violet; color:#fff}
+    .boxMove{left:700px; }
+  </style>
+
+
+</head>
+<body>
+  <div class="box box1">box1</div>
+  <div class="box box2">box2</div>
+  <div class="box box3">box3</div>
+  <div class="box box4">box4</div>
+  <div class="box box5">box5</div>
+  <div class="view">
+    <p>scroll : <span class="scrollBox">0</span></p>
+    <p>window height / 3 : <span class="winHeight">0</span></p>
+  </div>
+
+  <script>
+    const scrollHeight = document.querySelectorAll(".scrollBox")[0];
+    const boxChange = document.querySelectorAll(".box");
+    const winH = document.querySelector(".winHeight");
+
+      window.addEventListener("scroll", function(){
+        console.log(window.pageYOffset);
+        const scrollYPos = window.pageYOffset;
+        scrollHeight.innerHTML = scrollYPos;
+        for(let i=0; i<boxChange.length; i++){
+          if(boxChange[i].offsetTop<scrollYPos + window.winHeight){
+            boxChange[i].classList.add("boxMove");
+          }else{
+            boxChange[i].classList.remove("boxMove");
+          }
+        };
+      });
+
+      // window.addEventListener("resize", function(){});
+      window.addEventListener("resize", view);
+      function view(){
+        const winHeight = window.innerHeight/2 ;
+        winH.innerHTML = winHeight;
+          // console.log(window.innerHeight);
+        }
+        view();
+  </script>
+</body>
+</html>
