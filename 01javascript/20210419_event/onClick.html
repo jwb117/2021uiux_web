@@ -9,10 +9,11 @@
     html,body{height: 100%;}
   </style>
 </head>
-<body onmousemove="where(event)">
+<!-- <body onmousemove="where(event)"> -->
+<body>
   <script>
     function where(e){
-      console.log("x값:"+e.clientX+", y값:" + e.clientY)
+      // console.log("x값:"+e.clientX+", y값:" + e.clientY)
     }
   </script>
   정보입력<input type="text" id="exp" value="0"><br>
@@ -22,7 +23,7 @@
     function calc(){
       const exp = document.getElementById("exp");
       const result = document.getElementById("result");
-      console.log(eval(exp.value));
+      // console.log(eval(exp.value));
 
       result.value = eval(exp.value);
     }
@@ -54,8 +55,18 @@
       obj.style.border = "1px solid lightgray";
     }
 
+    let width = 0;
     function wheel(e, obj){
-          console.log(e.wheelDelta);
+          // console.log(e.wheelDelta);
+          if(e.wheelDelta < 0){
+            width--;
+            if(width < 0 ) {width =0}
+          }else{
+            width++;
+          }
+          console.log(width);
+          obj.style.borderStyle="solid";
+          obj.style.borderWidth=`${width}px`;
     }
   </script>
 
