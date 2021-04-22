@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>focus</title>
+</head>
+<body>
+  이름<input type="text" id="name" onblur="chkName(this)"> <br>
+  <!-- 전화<input type="text" onblur="chkName(this)"> -->
+
+  <script>
+    function chkName(obj){
+      // alert("hi");
+      console.log(obj.value);
+      if(obj.value==""){
+        // alert("이름을 넣어주세요");
+        obj.focus();
+      }else{
+        alert("다음을 눌러주세요");
+      }
+    }
+
+  </script>
+
+</body>
+</html>
