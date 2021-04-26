@@ -1,11 +1,15 @@
-
+/* 공통부분 */
+.ml0{margin-left: 0 !important;}
 /* head 부분 시작 */
-#gallery{width: 840px; margin: 0 auto;}
+#gallery{width: 824px; margin: 0 auto; background: skyblue;}
 #gallery img{display: block;}
-#gallery #images{display: none; margin: 0 auto;}
-#images a{display: none;}
+#gallery #images {width: 760px; margin: 0 auto;}
+#images a{display:none;}
 
 #thumbnail{width: 824px;}
 #thumbnail > div{float:left;}
-#thumbnail.left, #thumbnail.right{width: 32px; height: 95px; display: flex;
-justify-content: center; align-items: center;}
+#thumbnail div.left, #thumbnail div.right{width: 32px; height: 95px; display: flex; cursor:pointer;
+justify-content: center; align-items: center; background: orange;}
+#thumbnail .container ul{width: 2280px; position: relative; left:0;}
+#thumbnail .container li{float: left; width: 120px; margin-left: 8px; cursor:pointer;}
+#thumbnail .container{width: 760px; height: 95px; overflow: hidden; background: green;}

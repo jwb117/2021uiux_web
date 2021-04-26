@@ -24,7 +24,7 @@
   </style>
 </head>
 <body>
-  <div class="toggleMenu">
+  <div class="toggleMenu" onclick="change()">
 
     <div class="bar1"></div>
     <div class="bar2"></div>
@@ -33,15 +33,31 @@
   </div>
 
   <script>
+    function change(){
+      const toggleName =
+        document.querySelector(".toggleMenu").getAttribute("class");
+      console.log(toggleName);
+      if(toggleName == "toggleMenu"){
+        document.getElementsByClassName("toggleMenu")[0].classList.add("change");
+      }else{document.querySelectorAll(".toggleMenu")[0].classList.remove("change");}
+    };
+
+  //document.getElementsByClassName("toggleMenu")[0].addEventListener("click", function(){
+  //  const toggle = document.querySelector(".toggleMenu").getAttribute("class");
+  //console.log(toggle);
+  //    if(toggle == "toggleMenu"){
+  //      document.querySelectorAll(".toggleMenu")[0].classList.add("change")
+  // }else{document.getElementsByClassName("toggleMenu")[0].classList.remove("change");
+  //   }
+  //  });
+  </script>
+  <!-- <script>
     $(".toggleMenu").click(function(){
       const toggle = $(".toggleMenu").attr("class"); //get으로 값을 하나 가져간다.
       if(toggle == "toggleMenu"){
       $(".toggleMenu").addClass("change");
-    }else{$(".toggleMenu").removeClass("change");
-
-    }
+    }else{$(".toggleMenu").removeClass("change");}
     });
-  </script>
-
+  </script> -->
 </body>
 </html>

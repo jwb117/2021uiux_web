@@ -21,8 +21,8 @@
       $(".right").click(function(){
 
         current++;
-        if(current == 3){current=2};
         // current = current +1;
+        if(current == 3){current=0};        
         console.log(current);
         imgMove();
         // $(".container>ul").css("left", current*-1*760);
@@ -31,7 +31,7 @@
       $(".left").click(function(){
         // current = current -1;
         current--;
-        if(current == -1){current=0};
+        if(current == -1){current=2};
         console.log(current);
         imgMove();
         // $(".container>ul").css("left", current*-1*760);

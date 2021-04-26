@@ -8,46 +8,88 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/singapore.css">
   <script src="js/jquery-3.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#thumbnail li").click(function(){
+        let n = $(this).index();
+        // console.log(n);
+        $("#images a").hide().eq(n).show();
+      });
+      let now = 0;
+      $(".right").click(function(){
+        now++;
+        console.log(now);
+        if(now == 3){now = 2};
+        imgMove();
+      });
+      $(".left").click(function(){
+        now--;
+        if(now == -1){now = 0};
+        console.log(now);
+        imgMove();
+      });
+      function imgMove(){
+        let change = now * -1 * 760;
+        $(".container>ul").stop().animate({left:change}, 1000);
+      }
+    });
 
+
+  </script>
 </head>
 <body>
   <div id="gallery">
     <div id="images">
-      <a href="#"><img src="singapore_imgs/1.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/2.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/3.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/4.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/5.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/6.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/7.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/8.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/9.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/10.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/11.jpg" alt=""></a>
-      <a href="#"><img src="singapore_imgs/12.jpg" alt=""></a>
+      <a href="#" style="display: block;"><img src="singapore_imgs/img01.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img02.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img03.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img04.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img05.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img06.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img07.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img08.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img09.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img10.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img11.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img12.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img13.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img14.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img15.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img16.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img17.png" alt=""></a>
+      <a href="#"><img src="singapore_imgs/img18.png" alt=""></a>
+
     </div>
     <div id="thumbnail" class="clearfix">
       <div class="left"><img src="singapore_imgs/btn_left.gif" alt=""></div>
       <div class="container">
         <ul class="clearfix">
-          <li><img src="singapore_imgs/1.jpg" alt="">1</li>
-          <li><img src="singapore_imgs/2.jpg" alt="">2</li>
-          <li><img src="singapore_imgs/3.jpg" alt="">3</li>
-          <li><img src="singapore_imgs/4.jpg" alt="">4</li>
+          <li class="ml0"><img src="singapore_imgs/thumb_img01.png" alt="">1</li>
+          <li><img src="singapore_imgs/thumb_img02.png" alt="">2</li>
+          <li><img src="singapore_imgs/thumb_img03.png" alt="">3</li>
+          <li><img src="singapore_imgs/thumb_img04.png" alt="">4</li>
+          <li><img src="singapore_imgs/thumb_img05.png" alt="">5</li>
+          <li><img src="singapore_imgs/thumb_img06.png" alt="">6</li>
 
-          <li><img src="singapore_imgs/5.jpg" alt="">5</li>
-          <li><img src="singapore_imgs/6.jpg" alt="">6</li>
-          <li><img src="singapore_imgs/7.jpg" alt="">7</li>
-          <li><img src="singapore_imgs/8.jpg" alt="">8</li>
+          <li class="ml0"><img src="singapore_imgs/thumb_img07.png" alt="">7</li>
+          <li><img src="singapore_imgs/thumb_img08.png" alt="">8</li>
+          <li ><img src="singapore_imgs/thumb_img09.png" alt="">9</li>
+          <li><img src="singapore_imgs/thumb_img10.png" alt="">10</li>
+          <li><img src="singapore_imgs/thumb_img11.png" alt="">11</li>
+          <li><img src="singapore_imgs/thumb_img12.png" alt="">12</li>
 
-          <li><img src="singapore_imgs/9.jpg" alt="">9</li>
-          <li><img src="singapore_imgs/10.jpg" alt="">10</li>
-          <li><img src="singapore_imgs/11.jpg" alt="">11</li>
-          <li><img src="singapore_imgs/12.jpg" alt="">12</li>
+          <li class="ml0"><img src="singapore_imgs/thumb_img13.png" alt="">13</li>
+          <li><img src="singapore_imgs/thumb_img14.png" alt="">14</li>
+          <li><img src="singapore_imgs/thumb_img15.png" alt="">15</li>
+          <li><img src="singapore_imgs/thumb_img16.png" alt="">16</li>
+          <li><img src="singapore_imgs/thumb_img17.png" alt="">17</li>
+          <li><img src="singapore_imgs/thumb_img18.png" alt="">18</li>
+
         </ul>
-      <div class="right"><img src="singapore_imgs/btn_right.gif" alt=""></div>
       </div>
-    </div>
-  </div>
+      <div class="right"><img src="singapore_imgs/btn_right.gif" alt=""></div>
+
+    </div><!--thumbnail-->
+  </div><!--gallery-->
 </body>
 </html>
