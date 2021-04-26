@@ -1,0 +1,11 @@
+
+/* head 부분 시작 */
+#gallery{width: 840px; margin: 0 auto;}
+#gallery img{display: block;}
+#gallery #images{display: none; margin: 0 auto;}
+#images a{display: none;}
+
+#thumbnail{width: 824px;}
+#thumbnail > div{float:left;}
+#thumbnail.left, #thumbnail.right{width: 32px; height: 95px; display: flex;
+justify-content: center; align-items: center;}
