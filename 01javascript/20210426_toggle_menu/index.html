@@ -95,8 +95,8 @@
    };
 
    window.addEventListener("resize", function(){
-     document.querySelector("#myTopMenu").removeChild("style");
-     document.querySelectorAll(".toggleMenu")[0].removeChild("class");
+     document.querySelector("#myTopMenu").removeAttribute("style");
+     document.querySelectorAll(".toggleMenu")[0].classList.remove("change");
    });
 
 //    function change(){
