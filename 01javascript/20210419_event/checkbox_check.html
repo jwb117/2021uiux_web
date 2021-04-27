@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Checkbox</title>
+</head>
+<body>
+  <form>
+   모자 1만원 <input type="checkbox" name="total" value="10000" onclick="calc(this)">
+   정장 8만원 <input type="checkbox" name="total" value="80000" onclick="calc(this)">
+   구두 3만원 <input type="checkbox" name="total" value="30000" onclick="calc(this)">
+   <br />
+    <input type="text" id="sumtext" value="0">
+  </form>
+</body>
+<script>
+  let sum = 0;
+  function calc(cBox){
+    // console.log(cBox.value);체크해도 1만올라가고 체크풀어도 1만이 올라가는게 보임
+    if(cBox.checked){
+      sum = sum + parseInt(cBox.value);
+      console.log(sum);
+    }else{
+      sum = sum - parseInt(cBox.value);
+    };
+    document.getElementById("sumtext").value = sum;
+
+  };
+</script>
+</html>

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../../css/reset.css">
   <script src="../../js/jquery-3.1.1.min.js"></script>
   <style>
-    .toggleMenu{height: 50px; width: 50px; border: 1px solid #000; position: relative; cursor:pointer;}
+    .toggleMenu{height: 50px; width: 50px; border: 1px solid #000; position: absolute; cursor:pointer; right: 0; top: 0; display: none;}
     .toggleMenu div{width: 34px; height: 5px; background: #000; border-radius:3px; position: absolute; left: 50%; transform: translateX(-50%);
     transition:0.3s;}
     .bar1{top: 11px;}
@@ -21,26 +21,92 @@
     .toggleMenu.change .bar2{opacity:0; }
 
     .toggleMenu.change .bar3{left:50%; top:50%; transform:translate(-50%, -50%)  rotate(45deg)}
+
+    .menuWrap{width: 1200px; height: 50px; margin: 0 auto; background: pink; position: relative;}
+    .menuWrap h1{background: skyblue; width: 100px; text-align: center; height: 50px;}
+
+    #myTopMenu{position: absolute; left: 100px; top: 0;}
+    #myTopMenu a{display: block; float: left; padding: 14px 10px;}
+    .content{width: 1200px; margin: 0 auto;}
+
+    @media screen and (max-width:575px){
+     body{background: green;}
+     .menuWrap{width: 100%;}
+     .toggleMenu{display: block;}
+     #myTopMenu{position: fixed; width: 100%; height: 100%; background: orange; left: -100%; top: 0;
+        display: flex; justify-content: center; align-items: center; transition: 0.6s;}
+     .topNav{background: green; width: 50%;}
+     .topNav a{float:initial !important; text-align: center; }
+     .content{width: 100%; padding: 20px 20px;}
+
+    }
+
+    @media screen and (min-width:576px) and (max-width:991px){
+      .menuWrap{width: 100%; }
+      body{background: skyblue;}
+      #myTopMenu{left:initial; right:0;}
+      .content{width: 100%; padding: 20px 20px;}
+
+    }
+
+    @media screen and (min-width:992px){
+    .menuWrap{position: fixed; left:50%; transform: translateX(-50%);}
+    .content{padding-top: 70px;}
+    }
+
   </style>
 </head>
 <body>
-  <div class="toggleMenu" onclick="change()">
-
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-
+  <div class="menuWrap">
+    <h1>logo</h1>
+    <div id="myTopMenu">
+      <nav class="topNav clearfix">
+        <a href="#">MENU</a>
+        <a href="#">NEWS</a>
+        <a href="#">CONTACT</a>
+        <a href="#">PRODUCT</a>
+      </nav>
+    </div>
+    <div class="toggleMenu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
+  <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum fuga eaque dignissimos unde incidunt harum soluta magnam! Officiis dolorem, optio illo at eaque libero ullam ipsum iste et facere ipsa maxime quod quasi, pariatur beatae nesciunt, veniam iusto quia aperiam? Doloribus qui veritatis dolore illo vel accusantium, delectus impedit inventore, minus. Eos, laudantium unde mollitia voluptatem. Ipsam voluptate cupiditate ut tempore modi voluptatum repellat beatae eius. Repellendus voluptate dolores, ipsum est necessitatibus suscipit? Maxime dicta, doloribus eligendi totam soluta ab perspiciatis, accusantium deleniti commodi reiciendis natus doloremque. Iure sed id, voluptas. Officiis eius asperiores ipsam, omnis veritatis, ullam possimus saepe atque repellendus nam illo. Suscipit fugiat sequi, veritatis. Dicta enim fugit perferendis tempore eveniet debitis mollitia sunt veritatis explicabo reprehenderit! Quisquam porro obcaecati laudantium quaerat, repellendus assumenda eligendi veniam possimus, mollitia et cum! Dolorum, tempora perferendis, totam ut odit voluptate nam labore nobis earum aliquid similique quas eos, consequuntur atque est voluptatibus doloremque culpa, at alias voluptatum! Esse, ea facilis neque quis consectetur minus molestiae quisquam impedit vel, in dolor ullam voluptates ad illum nobis quaerat modi beatae aut? Omnis veniam ipsum laborum molestiae obcaecati esse nobis praesentium amet enim mollitia! Veritatis expedita qui, iusto optio officiis maiores magni quos eius quas a dicta deleniti, reiciendis culpa delectus! Placeat doloremque nemo quibusdam fugit, accusantium consectetur fuga velit maxime provident illo deserunt veritatis beatae hic, inventore alias ea tempora pariatur minima, porro quam. Dignissimos velit provident, sit perspiciatis minima quam libero deleniti itaque dolor eos sunt et aut repellendus ipsa cupiditate, repellat numquam inventore fuga. Voluptatibus consequuntur eius reprehenderit dolorem assumenda quos nulla similique mollitia illum soluta, rerum temporibus ea, itaque fuga architecto laborum delectus sit, animi natus possimus magnam reiciendis! Officia culpa ipsum adipisci corrupti repellendus asperiores molestias laboriosam eos molestiae sit cumque maiores quibusdam nihil, illo, consequatur magni. Sequi ea, delectus reprehenderit dicta nostrum, illo ducimus cum repellendus maiores dolorem, perferendis explicabo ullam! Tempore, praesentium. Quod facilis, quia ipsa quas debitis, vitae tenetur sapiente magni eum perferendis alias reiciendis et labore libero maxime provident totam. Voluptate, nesciunt veritatis voluptatem fuga, aliquam sapiente vitae? Voluptas repellendus cumque ipsum voluptate, ratione minima nisi debitis, placeat incidunt modi delectus laboriosam. Dicta voluptatibus dolor consectetur ullam magnam accusantium maiores sunt minus, animi vel eveniet sequi ea delectus suscipit, aliquam deserunt impedit dignissimos corrupti voluptatum ab dolores quaerat ipsam nesciunt nihil veritatis. Amet iusto atque eius officia sit, a placeat consectetur quod beatae consequatur qui magnam explicabo molestiae, fugiat, repudiandae debitis modi repellendus libero totam voluptates velit nisi voluptatem ut! Doloremque voluptas, tenetur! Sunt provident saepe sint voluptas est odio, excepturi ab illo iusto, iste dicta illum atque necessitatibus ex placeat voluptatem, maiores non ipsa? Nemo molestiae, corrupti dolorem. Iste ut facilis a impedit molestias libero est eligendi perspiciatis autem quam iusto corrupti minima, consectetur architecto consequatur soluta eos, ipsum praesentium sint voluptate! Quidem obcaecati, dolor, ipsum quas blanditiis deserunt veniam nemo cumque beatae, veritatis quae excepturi, corrupti eaque in. Iure dolor eveniet sint voluptatem harum distinctio, sapiente consectetur libero sequi in. Possimus, doloribus.
   </div>
 
   <script>
-    function change(){
-      const toggleName =
-        document.querySelector(".toggleMenu").getAttribute("class");
-      console.log(toggleName);
-      if(toggleName == "toggleMenu"){
-        document.getElementsByClassName("toggleMenu")[0].classList.add("change");
-      }else{document.querySelectorAll(".toggleMenu")[0].classList.remove("change");}
-    };
+    const btn = document.querySelector(".toggleMenu");
+    btn.onclick = function(){
+      let toggle = btn.getAttribute("class");
+      console.log(toggle);
+
+      if(toggle == "toggleMenu"){
+          btn.classList.add("change");
+          document.querySelectorAll("#myTopMenu")[0].style.left=0;
+
+
+
+      }else{
+         btn.classList.remove("change");
+         document.getElementById("myTopMenu").style.left="-100%";
+       }
+   };
+
+   window.addEventListener("resize", function(){
+     document.querySelector("#myTopMenu").removeChild("style");
+     document.querySelectorAll(".toggleMenu")[0].removeChild("class");
+   });
+
+//    function change(){
+//       const toggleName =
+//         document.querySelector(".toggleMenu").getAttribute("class");
+//       console.log(toggleName);
+//       if(toggleName == "toggleMenu"){
+//       document.getElementsByClassName("toggleMenu")[0].classList.add("change");
+//     }else{document.querySelectorAll(".toggleMenu")[0].classList.remove("change");}
+//   };
 
   //document.getElementsByClassName("toggleMenu")[0].addEventListener("click", function(){
   //  const toggle = document.querySelector(".toggleMenu").getAttribute("class");
@@ -51,13 +117,23 @@
   //   }
   //  });
   </script>
-  <!-- <script>
-    $(".toggleMenu").click(function(){
-      const toggle = $(".toggleMenu").attr("class"); //get으로 값을 하나 가져간다.
-      if(toggle == "toggleMenu"){
-      $(".toggleMenu").addClass("change");
-    }else{$(".toggleMenu").removeClass("change");}
-    });
-  </script> -->
+ <script>
+//    $(".toggleMenu").click(function(){
+//      const toggle = $(".toggleMenu").attr("class"); //get으로 값을 하나 가져간다.
+//      if(toggle == "toggleMenu"){
+//      $(".toggleMenu").addClass("change");
+//      $("#myTopMenu").stop().animate({top:0});
+//    $("#myTopMenu").css("left", 0);
+//    }else{$(".toggleMenu").removeClass("change");
+//      $("#myTopMenu").stop().animate({top:"-100%"});
+//      //$("#myTopMenu").css("left", "-100%");
+//    }
+//    $(window).resize(function(){
+//      $("#myTopMenu").removeAttr("style");
+//      $(".toggleMenu").removeClass("change");
+//    })
+//    });
+</script>
+
 </body>
 </html>
