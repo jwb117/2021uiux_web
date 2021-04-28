@@ -1,0 +1,200 @@
+@@charset "UTF-8";
+
+/*--------------content background (Animation) start*/
+.content{width: 100%; height: 1230px; margin-top: 68px; position: relative; overflow: hidden;}
+.content_background{width: 100%; height: 100%; background-image: url(../images/content_Back.jpg); background-repeat: no-repeat; background-size: cover;}
+
+.contentBox{width: 980px; height: 100%; margin:0 auto; position: relative; }
+
+.content_flrare_png{position:absolute; right: 50px; top: 350px; opacity:0; z-index: 50;
+			animation-name:flrare1;
+			animation-duration: 3s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+		}
+@keyframes flrare1{
+			from{  right: 50px; top: 350px; opacity:0;}
+			50%{right: 50px; top: 350px; opacity:0.7;}
+			to{ right: 50px; top: 350px; opacity:0;}
+		}
+
+.content_balloonHouse_png{position:absolute; left:1650px;
+			animation-name:balloonHouse;
+			animation-duration: 95s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			/*animation-fill-mode:forwards; */
+			/*animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			animation-timing-function:linear;}
+@keyframes balloonHouse{
+			from{left:1650px; bottom: -200px;}
+			to{left:1650px;  bottom: 1000px;  transform: rotate(3deg); }
+		}
+
+.content_airplain_png{position:absolute; left: -250px;
+			animation-name:airplain;
+			animation-duration: 100s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-timing-function:linear;}
+@keyframes airplain{
+			from{top:450px; left: -300px;}
+			50%{top:400px; transform: rotate(5deg); left: 1700px;}
+			to{top:450px;  left:3000px; }
+		}
+
+.content_airplain_png2{position:absolute; left: -250px;
+			animation-name:airplain2;
+			animation-duration: 100s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-timing-function:linear;
+			animation-delay: 30s;}
+@keyframes airplain2{
+			from{top:800px; left: -200px;}
+			50%{top:750px; transform: rotate(7deg); left: 1600px;}
+			to{top:800px;  left:3000px; }
+		}
+
+.content_reallyAir_png{position:absolute; left: -800px; bottom: -500px; transform: scale(0.1);
+			animation-name:realAirplain;
+			animation-duration: 3.5s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:1;    /*애니메이션 반복 횟수*/
+			animation-timing-function:linear;
+			animation-delay:5s;}
+@keyframes realAirplain{
+			from{bottom: -500px; left: -800px;}
+			to{bottom: 1500px;  left: 1600px; transform: rotate(-40deg);transform: scale(3)}
+		}
+
+.content_reallyAir2_png{position:absolute; left: -200px; bottom: 350px; transform: scale(0.2);
+			animation-name:realAirplain2;
+			animation-duration: 50s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			/*animation-fill-mode:forwards; */
+			/*animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			/*animation-timing-function:linear;*/
+			animation-delay:25s;}
+@keyframes realAirplain2{
+			from{bottom: 350px; left: -200px;}
+			to{bottom: 500px;  left:9999px; transform: rotate(2deg);transform: scale(2.5)}
+		}
+
+.content_reallyAir3_png{position:absolute; right: -200px; bottom: 750px; transform: scale(0.1);
+			animation-name:realAirplain3;
+			animation-duration: 50s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-delay:10s;}
+@keyframes realAirplain3{
+			from{bottom: 750px; right: -200px;}
+			to{bottom: 900px;  right:9999px; transform: rotate(-2deg);transform: scale(3)}
+		}
+
+.content_background_png1{position:absolute; right: 25%;
+			animation-name:balloon;
+			animation-duration: 4s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			animation-timing-function:cubic-bezier(0.56, 0.22, 0.63, 1.11);}
+@keyframes balloon{
+			from{top: 240px; }
+			50%{top:230px; transform: rotate(2deg);}
+			to{top: 240px;}
+		}
+.content_background_png2{position:absolute; right: -3%;
+			animation-name:balloon2;
+			animation-duration: 2.5s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			animation-timing-function:cubic-bezier(0.46, -0.01, 0.5, 1.04);}
+@keyframes balloon2{
+			from{top:210px;}
+			50%{top:235px; transform: rotate(-4deg);}
+			to{top: 230px;}
+		}
+
+.content_background_png3{position:absolute; right: -10%;
+			animation-name:balloon3;
+			animation-duration: 5s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			animation-timing-function:cubic-bezier(0.38, 0.06, 0.57, 1.16);
+}
+@keyframes balloon3{
+			from{top:30px;}
+			50%{top:40px; transform:rotate(1deg);}
+			to{top: 55px; transform:rotate(-3deg);}
+		}
+.content_background_png4{position:absolute; left: -30%;
+			animation-name:balloon4;
+			animation-duration: 5s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			animation-timing-function:cubic-bezier(0.3, -0.06, 0.71, 1.15);}
+@keyframes balloon4{
+			from{top:860px; }
+			50%{top:870px; transform: rotate(2deg);}
+			to{top: 875px;}
+		}
+.content_background_png5{position:absolute; left: -35%;
+			animation-name:balloon5;
+			animation-duration: 10s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			animation-timing-function:cubic-bezier(0.49, 0.14, 0.52, 1.23);}
+@keyframes balloon5{
+			from{top:-110px; }
+			50%{top:-180px; transform: rotate(35deg);}
+			to{top: -100px;}
+		}
+
+.content_background_png6{position:absolute; left: -50%;
+			animation-name:balloon6;
+			animation-duration: 10s;    /*애니메이션 작동 시간*/
+			animation-iteration-count:infinite;    /*애니메이션 반복 횟수*/
+			animation-direction:alternate;    /*애니메이션 방향 왔다갔다*/
+			animation-timing-function:cubic-bezier(0.54, -0.04, 0.63, 1.21);}
+@keyframes balloon6{
+			from{top:650px; }
+			30%{top:610px; left: -45%;  transform: rotate(15deg);}
+			60%{top:590px; left: -40%;  transform: rotate(10deg);}
+			to{top: 630px; left: -42%;transform: rotate(0deg);}
+		}
+
+.content_background_topText{position: absolute; top: 60px; letter-spacing: 1px;
+	animation-name:topTextAni;
+			animation-duration: 1s;    /*애니메이션 작동 시간*/
+			animation-fill-mode: forwards;
+			animation-iteration-count:1;
+			animation-timing-function:linear;}
+@keyframes topTextAni{
+			from{right:500px; }
+			to{right: 250px;  top:60px; color:#0c41b8; }
+		}
+
+.content_background_topText2 {position: absolute; top: 60px;
+	animation-name:topSpanTextAni;
+			animation-duration: 2s;    /*애니메이션 작동 시간*/
+			animation-fill-mode: forwards;
+			animation-iteration-count:1;}
+@keyframes topSpanTextAni{
+			from{right:500px;}
+			30%{right: 150px; }
+			50%{color:#ffb136;}
+			80%{right: 150px; top:30px;}
+			to{right: 150px; top:60px; color:#0c41b8;}
+		}
+
+.content_background_topText h1{font-size:60px;  /*color: #ffa508;*/}
+.content_background_topText2 h1{font-size:60px;  /*color: #ffa508;*/}
+.content_background_topText2:after{content: ""; display: block; background-color: #082c7f; width: 80px; height: 5px; position: absolute; top:80px; right:3px;}
+
+.content_background_bottomText{position: absolute; top: 130px;  right: 178px;
+animation-name:bottomTextAni;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-iteration-count:1;
+			animation-timing-function:linear;}
+@keyframes bottomTextAni{
+			from{top: 170px; opacity: 0}
+			to{ top: 150px; opacity: 1}
+		}
+
+.content_background_bottomText p{font-size:25px; color:#172934; font-weight: bold;}
+/*--------------content background (Animation) end*/

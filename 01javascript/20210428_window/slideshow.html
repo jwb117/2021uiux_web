@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SlideShow</title>
+  <style>
+  button{display: block;}
+  </style>
+</head>
+<body>
+  <div id="pic">
+    <img src="imgs/img1.png" alt="">
+  </div>    
+    <button onclick="stop()">멈춤</button>
+
+  <script>
+    let num = 1;
+    const pic = document.getElementById("pic");
+    let timeId = setInterval("doSlide()", 1000);
+
+    function doSlide(){
+      num++;
+      if(num == 12){num=1};
+      pic.innerHTML = "<img src='imgs/img" + num + ".png'>";
+    };
+
+    function stop(){
+      clearInterval(timeId);
+    };
+
+
+  </script>
+
+</body>
+
+</html>
