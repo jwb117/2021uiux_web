@@ -49,14 +49,23 @@ $(document).ready(function(){
     //     $(".menu>a").removeClass("active").eq(2).addClass("active");
     //   }
     // });
+
     $(window).scroll(function(){
-    for(i=0; i<$(".scene").length; i++){
       let scrollY = $(window).scrollTop();
-      console.log(scrollY);
-      let st = $(".scene").eq(i).offset().top
-        if(scrollY >= st){$(".menu>a").removeClass("active").eq(i).addClass("active");
-       }
-     }
+    // for(i=0; i<$(".scene").length; i++){
+    //   console.log(scrollY);
+    //   let st = $(".scene").eq(i).offset().top
+    //     if(scrollY >= st){$(".menu>a").removeClass("active").eq(i).addClass("active");
+    //    }
+    //  }
+
+    $(".scene").each(function(index){
+      if(scrollY >= $(this).offset().top){
+      // if(scrollY >= $(".scene").eq(index).offset().top){
+        $(".menu>a").removeClass("active").eq(index).addClass("active");
+      }
+    });
+
     });
 
 });
