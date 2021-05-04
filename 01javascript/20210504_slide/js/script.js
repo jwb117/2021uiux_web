@@ -9,6 +9,7 @@ $(document).ready(function(){
     function slider(){
       banner.eq(current).css("left", 0).stop().animate({left:"-100%"}, 1000);
       current++;
+      console.log(current);
       if(current == 5){current =0}
       banner.eq(current).css("left", "100%").stop().animate({left:"0%"}, 1000);
     }
