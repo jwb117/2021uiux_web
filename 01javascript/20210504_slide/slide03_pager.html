@@ -25,6 +25,7 @@
       let current = 0;
       const banner = $(".wrapper li");
       const banCount = banner.length;//now 5
+      const pager = $(".pager span");
       let i=0; //next 이미지
       let overBtn = false;
 
@@ -33,7 +34,7 @@
         overBtn=true;
         i=current+1;
         if(i==banCount){i=0;}
-        sliderView();
+        sliderView("next");
       } //if overBtn
     }); //next click
 
@@ -43,17 +44,41 @@
         overBtn=true;
         i=current-1;
         if(i==-1){i=banCount-1;}
-        sliderView();  
+        sliderView("prev");
         }
       });
 
-      function sliderView(){
+      function sliderView(view){
+        pager.removeClass("active").eq(i).addClass("active");
+
+        if(view == "next"){
         banner.eq(current).css({left:0}).stop().animate({left:"-100%"}, 1000);
         banner.eq(i).css({left:"100%"}).stop()
         .animate({left:0},{duration:1000,complete:function(){overBtn = false}
+      });//next일때
+    }else{
+        banner.eq(current).css({left:0}).stop().animate({left:"100%"}, 1000);
+        banner.eq(i).css({left:"-100%"}).stop()
+        .animate({left:0}, {duration : 1000, complete : function(){overBtn = false;}
       });
-        console.log("현재위치:" + current + ", 다음위치:" + i);
-        current = i;}
+    }
+    current = i;
+  }
+    pager.click(function(){
+      i = $(this).index();
+      sliderView("next");
+      });
+    // setInterval(trigger, 3000);
+    //
+    function trigger(){
+      $(".next").trigger("click");
+    }
+
+    $(window).mousewheel(function(event, delta){
+      if(delta < 0){
+        $(".next").trigger("click");
+      }else{$(".prev").trigger("click");}
+    });
 
     }); //document ready
   </script>
