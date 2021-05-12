@@ -143,7 +143,44 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 
 <hr>
-<img src="<? echo G5_THEME_IMG_URL?>/img01.png" alt="">
+<?php if(defined("_INDEX_")){?>
+  <ul class="slider">
+<li><img src="<? echo G5_THEME_IMG_URL?>/img01.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img02.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img03.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img04.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img05.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img06.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img07.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img08.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img09.png" alt=""></li>
+<li><img src="<? echo G5_THEME_IMG_URL?>/img10.png" alt=""></li>
+</ul>
+
+<script>
+ $(document).ready(function(){
+  var mySlide = $(".slider").bxSlider({
+    controls:false,
+    auto:true,
+    speed:1000,
+    pause:1000
+  });
+});
+</script><?}?>
+
+<style>
+  .bx-wrapper img {margin: 0 auto; width:75%;}
+  .bx-wrapper {
+    -moz-box-shadow: 0;
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+    border: none;
+    background: none;
+  }
+
+</style>
+
+
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="container_wr">
