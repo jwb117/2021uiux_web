@@ -143,7 +143,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 
 <hr>
-
+<img src="<? echo G5_THEME_IMG_URL?>/img01.png" alt="">
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="container_wr">
