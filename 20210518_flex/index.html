@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  .container{display:flex; background: red; /*flex-direction: column;*/ height: 100vh;}
+  .container div{flex-basis:calc(100%/3);}
+  .container div:nth-child(1){background: skyblue; }
+  .container div:nth-child(2){background: orange; flex:2}
+  .container div:nth-child(3){background: yellow; }
+  @media screen and (max-width:700px){
+    .container{flex-direction:column;}
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1 Lorem ipsum.rteaaryray </div>
+    <div class="item">2 Lorem </div>
+    <div class="item">3 Lorem ipsum. </div>
+
+  </div>
+</body>
+</html>
