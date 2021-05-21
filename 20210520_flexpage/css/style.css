@@ -33,7 +33,7 @@ header{display: flex; justify-content: center; height: 100px;}
 /* general */
 #general{display: flex; justify-content: center;}
 #general section{flex:2; }
-#general aside{flex:1; background: orange;}
+#general aside{flex:1;}
 
 /* widget */
 .widget-title{padding: 25px 0; }
@@ -75,4 +75,5 @@ footer{background: #000; padding: 30px 0 ; display: flex; justify-content: cente
   .widget-body article{margin-right: 0;}
   .widget.poster{display: none;}
   .widget-body iframe{width: -webkit-fill-available; height: 300px;}
+  .widget.movie{margin-bottom: 20px;}
 }
