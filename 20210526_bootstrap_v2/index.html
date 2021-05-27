@@ -212,20 +212,98 @@
       </div>
      </div>
     <!-- portfolio end -->
-
+<style>
+ .customer .sliderView{padding: 30px; background: var(--bgcolor2); border-radius:5px;}
+</style>
     <!-- customer start -->
-    <div class="customer">
+    <div class="customer mb-5">
       <div class="container">
         <h2 class="title text-center">CUSTOMER</h2>
         <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, numquam!</p>
-
-
+        <div class="owl-carousel owl-theme owl-loaded">
+        <!-- #1 data start-->
+          <div>
+            <div class="sliderView d-flex">
+              <img src="assets/user.svg" alt="사용자" class="img-fluid mr-3">
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, harum.</p>
+                <p>
+                  <img src="assets/quote.svg" alt="따옴표" class="d-block ml-auto" style="max-width:30px">
+                </p>
+              </div>
+            </div>
+          </div>
+        <!-- #1 data end -->
+        <!-- #2 data start-->
+          <div>
+            <div class="sliderView d-flex">
+              <img src="assets/user.svg" alt="사용자" class="img-fluid mr-3">
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, harum.</p>
+                <p>
+                  <img src="assets/quote.svg" alt="따옴표" class="d-block ml-auto" style="max-width:30px">
+                </p>
+              </div>
+            </div>
+          </div>
+        <!-- #2 data end -->
+        <!-- #3 data start-->
+          <div>
+            <div class="sliderView d-flex">
+              <img src="assets/user.svg" alt="사용자" class="img-fluid mr-3">
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, harum.</p>
+                <p>
+                  <img src="assets/quote.svg" alt="따옴표" class="d-block ml-auto" style="max-width:30px">
+                </p>
+              </div>
+            </div>
+          </div>
+        <!-- #3 data end -->
+        <!-- #4 data start-->
+          <div>
+            <div class="sliderView d-flex">
+              <img src="assets/user.svg" alt="사용자" class="img-fluid mr-3">
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, harum.</p>
+                <p>
+                  <img src="assets/quote.svg" alt="따옴표" class="d-block ml-auto" style="max-width:30px">
+                </p>
+              </div>
+            </div>
+          </div>
+        <!-- #4 data end -->
+        </div>
       </div>
     </div>
     <!-- customer end -->
-
-    <div style="height:1000px"></div>
-
+    <style>
+      .footer{background: var(--bgcolor2);}
+      .icon li + li{margin-left: 25px;}
+      .icon a{display: block; width: 50px; height: 50px; border-radius: 25px; background:white; text-align: center;  line-height: 50px; transition: 0.3s;}
+      .icon a img{max-width: 20px;}
+      .icon a:hover{box-shadow: var(--shadow-color);}
+    </style>
+    <!-- footer start -->
+    <div class="footer py-5">
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+            <img src="assets/logo.svg" alt="logo" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <ul class="icon d-flex justify-content-center justify-content-md-end">
+              <li><a href="#!"><img src="assets/facebook.svg" alt=""></a></li>
+              <li><a href="#!"><img src="assets/twitter.svg" alt=""></a></li>
+              <li><a href="#!"><img src="assets/instagram.svg" alt=""></a></li>
+              <li><a href="#!"><img src="assets/linkedin.svg" alt=""></a></li>
+              <li><a href="#!"><img src="assets/youtube.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer end -->
 <script>
 
   const btns = $(".portfolio .btn-group button");
@@ -248,8 +326,18 @@
 
     $(".view .popup_link").magnificPopup({
       type:'image'
-    })
+    });
 
+    $(".customer .owl-carousel").owlCarousel({
+      loop:false,
+      margin:30,
+      autoplay:true,
+      responsive:{
+        0:{items:1},
+        600:{items:1},
+        1000:{items:2}
+      }
+    });
 
 </script>
 
