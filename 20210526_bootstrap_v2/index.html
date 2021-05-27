@@ -21,6 +21,7 @@
 
 
   <style>
+  h1, h2, h3, h4, h5, h6{font-weight:bold;}
     :root{
       --primary-color-1:#4458cc;
       --primary-color-2:#854fee;
@@ -34,7 +35,16 @@
   .button.primary-button{background: var(--gradient-color-1); color: #fff; box-shadow:var(--box-shadow);}
   .button.secondary-button{box-shadow:var(--box-shadow);}
   .bg-color{background: var(--bgcolor1);}
-  h1, h2, h3, h4, h5, h6{font-weight:bold;}
+
+  .headerWrap .nav-item{font-size: 1.1rem; border-bottom:4px solid transparent; transition: 0.3s;}
+  .headerWrap .nav-item:hover{font-size: 1.2rem; border-bottom:4px solid var(--primary-color-1);}
+  .headerWrap.fixed-top{box-shadow: var(--bgcolor1);  background:var(--primary-color-2)!important ; }
+  .headerWrap.fixed-top a{color:#fff !important;}
+  @media screen and (max-width:756px){
+    .headerWrap .nav-item:hover{border-bottom:0 none; background:var(--bgcolor2);}
+    .headerWrap .nav-item{border-bottom:0 none; padding-left: 20px;}
+
+  }
 
   </style>
 </head>
@@ -305,6 +315,23 @@
     </div>
     <!-- footer end -->
 <script>
+
+  let navOffset = $(".headerWrap").height()+100;
+    hScroll();
+
+  function hScroll(){
+    $(window).scroll(function(){
+      let scroll = $(window).scrollTop();
+      if(navOffset < scroll){
+        $(".headerWrap").addClass("fixed-top");
+      }else{
+        $(".headerWrap").removeClass("fixed-top");
+      }
+    });
+  }
+
+
+  hScroll();
 
   const btns = $(".portfolio .btn-group button");
   btns.click(function(){
