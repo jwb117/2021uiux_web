@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+:root{
+  --primary-color:#02b3e4;
+  --secondary-color:#ff5483;
+  --third-color:#a951ed;
+}
+
+#headerWrap .bgcolor{
+  position: absolute; top:-300px;
+  width: 100%; height: 600px; background: linear-gradient(160deg, #02ccba, #aa7ecd);
+  transform: skew(0deg, -15deg);
+}
+
+#headerWrap .video video{
+  object-fit: fill; width: 100%; border-radius: 5px; box-shadow:10px 10px 25px rgb(46,61,73);
+}
+
+.card-view li{
+  border-radius: 5px; overflow: hidden; box-shadow:10px 10px 25px rgb(46,61,73);
+}
+
+
+
+
+
+
+
+
+
+
+/* jeong */
