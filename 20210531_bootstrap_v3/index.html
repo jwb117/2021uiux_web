@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/base.css">
 
+
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -92,43 +93,160 @@
               </li>
             </ul>
           </div>
-
         </div>
-
-
-
-
-
       </div> <!--container-->
     </div> <!--headerWrap-->
 
-    <div class="container">
+    <div class="container mb-5">
       <img src="images/logos.png" alt="" class="img-fluid w-100">
     </div>
 
-    <div class="container">
-      <!-- Slider main container -->
-      <div class="swiper-container">
-        <!-- Additional required wrapper -->
+<div class="slider mb-5">
+  <div class="container">
+    <div class="slider-title text-center mb-3">OUR AMAZING COMMUNITY</div>
+
+    <div class="row">
+      <div class="swiper-container col-md-10">
         <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          <!-- #1 -->
+          <div class="swiper-slide">
+            <div class="text-center">
+              <h4>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ipsum hic modi dolore molestiae dolor exercitationem debitis nulla rem rerum!</h4>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
+          <!-- #1 -->
+          <!-- #2 -->
+          <div class="swiper-slide">
+            <div class="text-center">
+              <h4>2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ipsum hic modi dolore molestiae dolor exercitationem debitis nulla rem rerum!</h4>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
+          <!-- #2 -->
+          <!-- #3 -->
+          <div class="swiper-slide">
+            <div class="text-center">
+              <h4>3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ipsum hic modi dolore molestiae dolor exercitationem debitis nulla rem rerum!</h4>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
+          <!-- #3 -->
         </div>
-
-        <!-- If we need navigation buttons -->
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
-
       </div>
-    </div>
+      <div class="swiper-button-prev d-none d-md-block"></div>
+      <div class="swiper-button-next d-none d-md-block"></div>
+    </div> <!--row-->
+  </div> <!--container-->
+</div>
 
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <!--#1-->
+      <div class="col-sm-6 col-lg-4 mb-5">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/nano1.jpg" alt="" class="img-fluid w-100">
+            <div class="mask"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              Lorem ipsum dolor.
+            </div>
+          </div>
+        </div>
+      </div>
+        <!--#1-->
+      <!--#2-->
+      <div class="col-sm-6 col-lg-4 mb-5">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/nano2.jpg" alt="" class="img-fluid w-100">
+            <div class="mask"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              Lorem ipsum dolor.
+            </div>
+          </div>
+        </div>
+      </div>
+        <!--#2-->
+      <!--#3-->
+      <div class="col-sm-6 col-lg-4 mb-5">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/nano3.jpg" alt="" class="img-fluid w-100">
+            <div class="mask"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              Lorem ipsum dolor.
+            </div>
+          </div>
+        </div>
+      </div>
+        <!--#3-->
+        <!--#4-->
+        <div class="col-sm-6 col-lg-4 mb-5">
+          <div class="card">
+            <div class="card-img">
+              <img src="images/nano4.jpg" alt="" class="img-fluid w-100">
+              <div class="mask"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                Lorem ipsum dolor.
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--#4-->
+        <!--#5-->
+        <div class="col-sm-6 col-lg-4 mb-5">
+          <div class="card">
+            <div class="card-img">
+              <img src="images/nano5.jpg" alt="" class="img-fluid w-100">
+              <div class="mask"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                Lorem ipsum dolor.
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--#5-->
+        <!--#6-->
+        <div class="col-sm-6 col-lg-4 mb-5">
+          <div class="card">
+            <div class="card-img">
+              <img src="images/nano6.jpg" alt="" class="img-fluid w-100">
+              <div class="mask"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                Lorem ipsum dolor.
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--#6-->
+    </div> <!--row-->
+  </div> <!--container-->
+</div>
 
 <script>
   const swiper = new Swiper('.swiper-container', {
     speed: 400,
     spaceBetween: 100,
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+    loop:true,
+    autoplay:true
   });
 
 </script>
