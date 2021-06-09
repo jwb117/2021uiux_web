@@ -7,9 +7,13 @@
     <title>fullpage</title>
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.fullPage.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
     <script>
         $(document).ready(function(){
             $("#fullpage").fullpage({
@@ -32,24 +36,52 @@
         .section.page3{background-image: url(images/bg3.jpg);}
         .section.page4{background-image: url(images/bg4.jpg);}
         #navTop{
-            position: fixed;z-index:1;background: #fff;
+            position: relative; right: 0;z-index:1;background: #fff;
             width: 100%;
         }
+        .topMenu{margin: 0;}
+
+
         #navTop li{display: inline-block;padding: 10px;}
-        #navTop li.active{background: skyblue;}
+        #navTop li.active{color:#fff;}
         #fp-nav.right{right:10px;}
         .fp-tooltip.right{right:20px}
     </style>
 </head>
 <body>
-    <nav id="navTop">
-        <ul class="topMenu">
+    <!-- <nav id="navTop" class="navbar  bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">LOGO</a>
+        <ul class="navbar-nav topMenu ml-0 ml-auto">
             <li data-menuanchor="m1st"><a href="#m1st">home</a></li>
             <li data-menuanchor="m2st"><a href="#m2st">product</a></li>
             <li data-menuanchor="m3st"><a href="#m3st">community</a></li>
             <li data-menuanchor="m4st"><a href="#m4st">board</a></li>
         </ul>
-    </nav>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-md-0">
+       <a class="navbar-brand" href="#">LOGO</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav topMenu ml-auto">
+           <li class="nav-item"  data-menuanchor="m1st">
+             <a class="nav-link" href="#m1st">Home </a>
+           </li>
+           <li class="nav-item" data-menuanchor="m2st">
+             <a class="nav-link" href="#m2st">product</a>
+           </li>
+           <li class="nav-item" data-menuanchor="m3st">
+             <a class="nav-link" href="#m3st">community</a>
+           </li>
+           <li class="nav-item" data-menuanchor="m4st">
+               <a class="nav-link" href="#m4st">board</a>
+             </li>
+
+         </ul>
+       </div>
+     </nav>
+
     <div id="fullpage">
         <div class="section page1" data-anchor="m1st">1</div>
         <div class="section page2" data-anchor="m2st">2</div>
