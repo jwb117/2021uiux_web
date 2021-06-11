@@ -1,0 +1,15 @@
+00html_test 폴더제작
+
+git
+git init
+git status
+git add *
+git commit -m "homepage"
+
+git config --global user.name "ID(아이디값)"
+
+git config --global user.email "email(이메일값)"
+
+git remote add origin https://github.com/jwb117/00html_test.git
+git branch -M main
+git push -u origin main

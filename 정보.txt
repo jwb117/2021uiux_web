@@ -1,0 +1,50 @@
+node.js install : 노드.js 처음 설치할때 입력
+
+node -v : 노드 버젼 확인
+
+npm install -g @vue/cli        // 뷰 cli까는 거(노드 cmd에서 치기)
+
+vue --version : 뷰 버젼 확인
+
+vue create 작명 : 프로젝트(폴더) 만들기 명령어
+
+github 레포지터리 생성하기(github 들어가서 new 눌러서 만들기)
+
+remote연결하기 (
+git remote add origin https://github.com/jwb117/jwb117.git
+git branch -M main
+git push -u origin main 입력하면 푸시까지 다되어서 레파지토리 완성됨)
+
+npm install :  node_modules 폴더 재설치할때 입력
+
+git clone 경로입력(https://github.com/jwb117/01vue_project.git) : 내려받기(복제, 풀다운)
+
+code . : 비쥬얼 스튜디오 코드 실행
+
+npm run serve : 서버실행 명령어
+
+이벤트 버스 : 해당하는 값을 전달할때 쓴다.
+
+
+component 만들기
+1> 파일생성 *.vue
+2> import 하기
+3>export default에 선언하기
+4> 데이터에 꽃기
+
+props 사용하는 방법(부모에서 자식으로)
+1) 전달(app.vue에서 서브 페이지파일로)
+2)등록(export default 에다가)
+3)사용
+
+emit 사용방법(자식이 부모에게)
+1)이벤트 작성(등록) 컴
+2)신호 전달(부모에게 상태변경요청) 컴
+3)신호 받기(자식에게서 받은 상태변경요청을 태그에 기재) 부모컴
+
+
+
+
+
+
+
