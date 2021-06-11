@@ -1,3 +1,9 @@
+[번외] npm install :  node_modules 폴더 재설치할때 입력
+
+[번외] git clone 경로입력(https://github.com/경로명(개인마다다름) : 내려받기(복제, 풀다운)
+
+[번외] 처음에 node.js 사이트 들어가서 인스톨 파일을 다운받아서(무조건 인터넷 접속되야함) 설치 후 진행
+
 [0] cmd 에서 node 먼저 설치하기
 
 [1] node.js install : 노드.js 처음 설치할때 입력(cmd-node 모드에서)
@@ -17,15 +23,11 @@ git remote add origin https://github.com/경로명(개인마다다름)
 git branch -M main
 git push -u origin main 입력하면 푸시까지 다되어서 레파지토리 완성됨)
 
-[번외] npm install :  node_modules 폴더 재설치할때 입력
-
-[번외] git clone 경로입력(https://github.com/경로명(개인마다다름) : 내려받기(복제, 풀다운)
-
 [8] code . : 비쥬얼 스튜디오 코드 실행(cmd창에서)
 
 [9] npm run serve : 서버실행 명령어(라이브서버로 브라우저로 실시간 볼 수 있음)
 
-[10]
+[10] 
 
 이벤트 버스 : 해당하는 값을 전달할때 쓴다.
 
