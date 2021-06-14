@@ -1,0 +1,24 @@
+www.git-scm.com git프로그램 인스톨
+1. 폴더생성 -> git init
+2. git add * / git commit -m "작명"
+3. github site -> repo 생성
+4. git config
+    git config --global user.name "이름"
+    git config --global user.email "이메일"
+
+git config 해제
+git config --unset --global user.name
+git config --unset --global user.email
+
+
+
+5. git remote add origin https://github.com/hanyong5/00html_test.git
+6. git branch -M main / git push -u orign main
+
+
+새컴퓨터에 clone
+1. git clone https://github.com/hanyong5/00html_test.git
+2. git config
+    git config --global user.name "이름"
+    git config --global user.email "이메일"
+3. code .  -> vcode 실행
