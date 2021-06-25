@@ -1,0 +1,20 @@
+1. cmd에서 vue add pwa 써서 모듈을 깔아주고 시작
+
+2. 원래는 manifest.json 파일내용을 변경해서 적용시켜줘야하나 빌드(번외에 있는 런 빌드이용)해서 내용을 바꾸려면 3번을 시행해야한다.
+
+3. vue.config.js (파일 만들어서 폴더안에 있어야함)
+
+[번외] npm run build (pwa 작동 확인하기 위해 스튜디오코드에서 작동)
+
+[번외] vue.config.js 파일만든 후에 안에다 붙여넣기해서 사용
+
+module.exports = {
+  pwa: {
+    name: '님 앱이름',
+    themeColor: '#4DBA87',
+    msTileColor: '#000000',
+    workboxOptions: {
+      exclude: [/\.map$/, /manifest\.json$/, 'index.html']
+    }
+  }
+}

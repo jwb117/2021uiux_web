@@ -2,13 +2,18 @@
 
 git
 git init
-git status
+------생략가능--------- git status ------생략가능---------
 git add *
-git commit -m "homepage"
+git commit -m "명작"
+git push -u origin main
+
+------생략가능---------
 
 git config --global user.name "ID(아이디값)"
 
 git config --global user.email "email(이메일값)"
+
+------생략가능---------
 
 git remote add origin https://github.com/jwb117/00html_test.git
 git branch -M main
