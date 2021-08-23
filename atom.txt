@@ -15,8 +15,8 @@ keymaps>open-in-browsers.cson
 
 9.atom-live-server
 keymaps>atom-live-server.cson
+"f12": "atom-live-server:startServer",
 
-10.autocomplete-project-paths  // 자동경로 
+10.autocomplete-project-paths  // 자동경로
 
 11. pigments // 색상출력
-
