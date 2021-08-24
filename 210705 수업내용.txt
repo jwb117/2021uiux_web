@@ -1,0 +1,19 @@
+for문 에러
+
+조건문에러
+
+methods 점검
+
+created 에러
+
+
+*bootstrap
+UI kit
+*foundation
+Normalize
+MATERIAL-UI
+Semantic UI
+pure.css
+skeleton
+milligram
+*tailwindcss

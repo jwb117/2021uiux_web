@@ -1,0 +1,6 @@
+brightness
+밝기 먼저 밝게 설정
+posterize time
+speed 300%로 조정
+gaussian blur
+마스크 씌어서 외곽은 흐리게 처리

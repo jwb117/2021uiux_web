@@ -1,0 +1,60 @@
+$maincolor:#ff0000;
+.box{color:$maincolor; background:$maincolor;
+}
+nav{
+    > ul.gnb{width:100%; 
+    >li{width:20%;  
+        &:hover{background:$maincolor;}
+    }
+  }
+}
+
+.btn{
+    font-size:2rem;
+    padding:10px;
+    border-radius:10px;
+    background:$maincolor;
+}
+.btn-green{
+    @extend .btn; background:green;
+}
+
+.btn-red{
+    @extend .btn; background:red;
+}
+@mixin test(){
+    font-size:3rem;
+    padding:10px;
+    
+}
+
+.container{
+    @include test();
+    background:skyblue;
+}
+
+@mixin test1($width){
+    font-size:3rem;
+    padding:$width;
+    
+}
+
+.section{
+    @include test1(30px);
+    
+}
+
+li{width:20%;}
+
+@mixin col($width, $pw){
+    width:$width;
+    float:left;
+    padding:$pw;
+}
+
+.col-3{
+    @include col(25%,10px);
+}
+.col-4{
+    @include col(33.33%,20px);
+}
